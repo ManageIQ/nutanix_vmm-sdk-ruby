@@ -20,11 +20,11 @@ module NutanixVmm
     LDAP = "LDAP".freeze
     EXTERNAL = "EXTERNAL".freeze
     SERVICE_ACCOUNT = "SERVICE_ACCOUNT".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [LOCAL, SAML, LDAP, EXTERNAL, SERVICE_ACCOUNT, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [LOCAL, SAML, LDAP, EXTERNAL, SERVICE_ACCOUNT, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

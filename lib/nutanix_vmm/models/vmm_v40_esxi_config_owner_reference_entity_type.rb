@@ -16,11 +16,11 @@ require 'time'
 module NutanixVmm
   class VmmV40EsxiConfigOwnerReferenceEntityType
     USER = "USER".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [USER, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [USER, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

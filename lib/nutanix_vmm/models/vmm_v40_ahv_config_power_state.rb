@@ -19,11 +19,11 @@ module NutanixVmm
     OFF = "OFF".freeze
     PAUSED = "PAUSED".freeze
     UNDETERMINED = "UNDETERMINED".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [ON, OFF, PAUSED, UNDETERMINED, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [ON, OFF, PAUSED, UNDETERMINED, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

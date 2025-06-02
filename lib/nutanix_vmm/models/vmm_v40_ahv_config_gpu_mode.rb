@@ -18,11 +18,11 @@ module NutanixVmm
     PASSTHROUGH_GRAPHICS = "PASSTHROUGH_GRAPHICS".freeze
     PASSTHROUGH_COMPUTE = "PASSTHROUGH_COMPUTE".freeze
     VIRTUAL = "VIRTUAL".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [PASSTHROUGH_GRAPHICS, PASSTHROUGH_COMPUTE, VIRTUAL, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [PASSTHROUGH_GRAPHICS, PASSTHROUGH_COMPUTE, VIRTUAL, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

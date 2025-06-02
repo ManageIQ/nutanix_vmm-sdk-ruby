@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40ImagesConfigEnforcementState
     ACTIVE = "ACTIVE".freeze
     SUSPENDED = "SUSPENDED".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [ACTIVE, SUSPENDED, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [ACTIVE, SUSPENDED, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

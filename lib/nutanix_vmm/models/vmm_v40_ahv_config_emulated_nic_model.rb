@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40AhvConfigEmulatedNicModel
     VIRTIO = "VIRTIO".freeze
     E1000 = "E1000".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [VIRTIO, E1000, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [VIRTIO, E1000, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

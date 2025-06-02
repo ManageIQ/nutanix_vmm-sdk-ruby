@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40ContentImageType
     DISK_IMAGE = "DISK_IMAGE".freeze
     ISO_IMAGE = "ISO_IMAGE".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [DISK_IMAGE, ISO_IMAGE, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [DISK_IMAGE, ISO_IMAGE, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

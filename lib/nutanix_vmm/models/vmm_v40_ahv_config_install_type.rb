@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40AhvConfigInstallType
     FRESH = "FRESH".freeze
     PREPARED = "PREPARED".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [FRESH, PREPARED, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [FRESH, PREPARED, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

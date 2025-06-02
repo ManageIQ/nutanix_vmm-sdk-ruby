@@ -18,11 +18,11 @@ module NutanixVmm
     INGRESS = "INGRESS".freeze
     EGRESS = "EGRESS".freeze
     TAP = "TAP".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [INGRESS, EGRESS, TAP, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [INGRESS, EGRESS, TAP, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

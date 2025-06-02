@@ -18,11 +18,11 @@ module NutanixVmm
     NVIDIA = "NVIDIA".freeze
     INTEL = "INTEL".freeze
     AMD = "AMD".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [NVIDIA, INTEL, AMD, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [NVIDIA, INTEL, AMD, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

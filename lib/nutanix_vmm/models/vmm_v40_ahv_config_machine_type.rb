@@ -18,11 +18,11 @@ module NutanixVmm
     PC = "PC".freeze
     PSERIES = "PSERIES".freeze
     Q35 = "Q35".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [PC, PSERIES, Q35, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [PC, PSERIES, Q35, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string
