@@ -1,0 +1,36 @@
+name: Update gem from OpenAPI Spec
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: '0 0 * * 0'
+
+jobs:
+  openapi-generate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up system
+      run: sudo apt install -y xq
+    - name: OpenAPI Generate
+      run: bin/openapi-generate
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v7
+      with:
+        add-paths: |
+          .openapi-generator
+          docs
+          lib
+          README.md
+          spec
+        commit-message: Update nutanix_vmm gem
+        branch: openapi_generate
+        author: ManageIQ Bot <bot@manageiq.org>
+        committer: ManageIQ Bot <bot@manageiq.org>
+        delete-branch: true
+        labels: enhancement
+        assignees: agrare
+        push-to-fork: miq-bot/nutanix_vmm-sdk-ruby
+        title: Update nutanix_vmm gem
+        body: Update the nutanix_vmm-sdk-ruby gem from the nutanix_vmm openapi-spec https://github.com/nutanix_vmm/nutanix_vmm/tree/main/api/openapi-spec
+        token: ${{ secrets.PR_TOKEN }}
