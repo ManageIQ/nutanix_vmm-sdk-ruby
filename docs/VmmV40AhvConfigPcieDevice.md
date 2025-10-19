@@ -8,7 +8,7 @@
 | **ext_id** | **String** | A globally unique identifier of an instance that is suitable for external consumption.  | [optional][readonly] |
 | **links** | [**Array&lt;CommonV10ResponseApiLink&gt;**](CommonV10ResponseApiLink.md) | A HATEOAS style link for the response.  Each link contains a user-friendly name identifying the link and an address for retrieving the particular resource.  | [optional][readonly] |
 | **assigned_device_info** | [**VmmV40AhvConfigPcieDeviceInfo**](VmmV40AhvConfigPcieDeviceInfo.md) |  | [optional] |
-| **backing_info** | [**VmmV40AhvConfigPcieDeviceAllOfBackingInfo**](VmmV40AhvConfigPcieDeviceAllOfBackingInfo.md) |  | [optional] |
+| **backing_info** | [**VmmV40AhvConfigPcieDeviceReference**](VmmV40AhvConfigPcieDeviceReference.md) |  | [optional] |
 
 ## Example
 
