@@ -4,15 +4,15 @@ All URIs are relative to *https://:9440/api*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**get_disk_stats_by_id_0**](StatsApi.md#get_disk_stats_by_id_0) | **GET** /vmm/v4.0/ahv/stats/vms/{vmExtId}/disks/{extId} | Get the stats for the specified VM disk |
-| [**get_nic_stats_by_id_0**](StatsApi.md#get_nic_stats_by_id_0) | **GET** /vmm/v4.0/ahv/stats/vms/{vmExtId}/nics/{extId} | Get the stats for the specified VM NIC |
-| [**get_vm_stats_by_id_0**](StatsApi.md#get_vm_stats_by_id_0) | **GET** /vmm/v4.0/ahv/stats/vms/{extId} | Get VM stats for a given VM |
-| [**list_vm_stats_0**](StatsApi.md#list_vm_stats_0) | **GET** /vmm/v4.0/ahv/stats/vms | List VM stats for all VMs |
+| [**get_disk_stats_by_id**](StatsApi.md#get_disk_stats_by_id) | **GET** /vmm/v4.0/ahv/stats/vms/{vmExtId}/disks/{extId} | Get the stats for the specified VM disk |
+| [**get_nic_stats_by_id**](StatsApi.md#get_nic_stats_by_id) | **GET** /vmm/v4.0/ahv/stats/vms/{vmExtId}/nics/{extId} | Get the stats for the specified VM NIC |
+| [**get_vm_stats_by_id**](StatsApi.md#get_vm_stats_by_id) | **GET** /vmm/v4.0/ahv/stats/vms/{extId} | Get VM stats for a given VM |
+| [**list_vm_stats**](StatsApi.md#list_vm_stats) | **GET** /vmm/v4.0/ahv/stats/vms | List VM stats for all VMs |
 
 
-## get_disk_stats_by_id_0
+## get_disk_stats_by_id
 
-> <GetDiskStatsById200Response1> get_disk_stats_by_id_0(vm_ext_id, ext_id, start_time, end_time, opts)
+> <GetDiskStatsById200Response1> get_disk_stats_by_id(vm_ext_id, ext_id, start_time, end_time, opts)
 
 Get the stats for the specified VM disk
 
@@ -48,28 +48,28 @@ opts = {
 
 begin
   # Get the stats for the specified VM disk
-  result = api_instance.get_disk_stats_by_id_0(vm_ext_id, ext_id, start_time, end_time, opts)
+  result = api_instance.get_disk_stats_by_id(vm_ext_id, ext_id, start_time, end_time, opts)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->get_disk_stats_by_id_0: #{e}"
+  puts "Error when calling StatsApi->get_disk_stats_by_id: #{e}"
 end
 ```
 
-#### Using the get_disk_stats_by_id_0_with_http_info variant
+#### Using the get_disk_stats_by_id_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetDiskStatsById200Response1>, Integer, Hash)> get_disk_stats_by_id_0_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
+> <Array(<GetDiskStatsById200Response1>, Integer, Hash)> get_disk_stats_by_id_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
 
 ```ruby
 begin
   # Get the stats for the specified VM disk
-  data, status_code, headers = api_instance.get_disk_stats_by_id_0_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
+  data, status_code, headers = api_instance.get_disk_stats_by_id_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetDiskStatsById200Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->get_disk_stats_by_id_0_with_http_info: #{e}"
+  puts "Error when calling StatsApi->get_disk_stats_by_id_with_http_info: #{e}"
 end
 ```
 
@@ -99,9 +99,9 @@ end
 - **Accept**: application/json
 
 
-## get_nic_stats_by_id_0
+## get_nic_stats_by_id
 
-> <GetNicStatsById200Response1> get_nic_stats_by_id_0(vm_ext_id, ext_id, start_time, end_time, opts)
+> <GetNicStatsById200Response1> get_nic_stats_by_id(vm_ext_id, ext_id, start_time, end_time, opts)
 
 Get the stats for the specified VM NIC
 
@@ -137,28 +137,28 @@ opts = {
 
 begin
   # Get the stats for the specified VM NIC
-  result = api_instance.get_nic_stats_by_id_0(vm_ext_id, ext_id, start_time, end_time, opts)
+  result = api_instance.get_nic_stats_by_id(vm_ext_id, ext_id, start_time, end_time, opts)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->get_nic_stats_by_id_0: #{e}"
+  puts "Error when calling StatsApi->get_nic_stats_by_id: #{e}"
 end
 ```
 
-#### Using the get_nic_stats_by_id_0_with_http_info variant
+#### Using the get_nic_stats_by_id_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetNicStatsById200Response1>, Integer, Hash)> get_nic_stats_by_id_0_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
+> <Array(<GetNicStatsById200Response1>, Integer, Hash)> get_nic_stats_by_id_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
 
 ```ruby
 begin
   # Get the stats for the specified VM NIC
-  data, status_code, headers = api_instance.get_nic_stats_by_id_0_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
+  data, status_code, headers = api_instance.get_nic_stats_by_id_with_http_info(vm_ext_id, ext_id, start_time, end_time, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetNicStatsById200Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->get_nic_stats_by_id_0_with_http_info: #{e}"
+  puts "Error when calling StatsApi->get_nic_stats_by_id_with_http_info: #{e}"
 end
 ```
 
@@ -188,9 +188,9 @@ end
 - **Accept**: application/json
 
 
-## get_vm_stats_by_id_0
+## get_vm_stats_by_id
 
-> <GetVmStatsById200Response1> get_vm_stats_by_id_0(ext_id, start_time, end_time, opts)
+> <GetVmStatsById200Response1> get_vm_stats_by_id(ext_id, start_time, end_time, opts)
 
 Get VM stats for a given VM
 
@@ -225,28 +225,28 @@ opts = {
 
 begin
   # Get VM stats for a given VM
-  result = api_instance.get_vm_stats_by_id_0(ext_id, start_time, end_time, opts)
+  result = api_instance.get_vm_stats_by_id(ext_id, start_time, end_time, opts)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->get_vm_stats_by_id_0: #{e}"
+  puts "Error when calling StatsApi->get_vm_stats_by_id: #{e}"
 end
 ```
 
-#### Using the get_vm_stats_by_id_0_with_http_info variant
+#### Using the get_vm_stats_by_id_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetVmStatsById200Response1>, Integer, Hash)> get_vm_stats_by_id_0_with_http_info(ext_id, start_time, end_time, opts)
+> <Array(<GetVmStatsById200Response1>, Integer, Hash)> get_vm_stats_by_id_with_http_info(ext_id, start_time, end_time, opts)
 
 ```ruby
 begin
   # Get VM stats for a given VM
-  data, status_code, headers = api_instance.get_vm_stats_by_id_0_with_http_info(ext_id, start_time, end_time, opts)
+  data, status_code, headers = api_instance.get_vm_stats_by_id_with_http_info(ext_id, start_time, end_time, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetVmStatsById200Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->get_vm_stats_by_id_0_with_http_info: #{e}"
+  puts "Error when calling StatsApi->get_vm_stats_by_id_with_http_info: #{e}"
 end
 ```
 
@@ -275,9 +275,9 @@ end
 - **Accept**: application/json
 
 
-## list_vm_stats_0
+## list_vm_stats
 
-> <ListVmStats200Response1> list_vm_stats_0(start_time, end_time, opts)
+> <ListVmStats200Response1> list_vm_stats(start_time, end_time, opts)
 
 List VM stats for all VMs
 
@@ -315,28 +315,28 @@ opts = {
 
 begin
   # List VM stats for all VMs
-  result = api_instance.list_vm_stats_0(start_time, end_time, opts)
+  result = api_instance.list_vm_stats(start_time, end_time, opts)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->list_vm_stats_0: #{e}"
+  puts "Error when calling StatsApi->list_vm_stats: #{e}"
 end
 ```
 
-#### Using the list_vm_stats_0_with_http_info variant
+#### Using the list_vm_stats_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListVmStats200Response1>, Integer, Hash)> list_vm_stats_0_with_http_info(start_time, end_time, opts)
+> <Array(<ListVmStats200Response1>, Integer, Hash)> list_vm_stats_with_http_info(start_time, end_time, opts)
 
 ```ruby
 begin
   # List VM stats for all VMs
-  data, status_code, headers = api_instance.list_vm_stats_0_with_http_info(start_time, end_time, opts)
+  data, status_code, headers = api_instance.list_vm_stats_with_http_info(start_time, end_time, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListVmStats200Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling StatsApi->list_vm_stats_0_with_http_info: #{e}"
+  puts "Error when calling StatsApi->list_vm_stats_with_http_info: #{e}"
 end
 ```
 

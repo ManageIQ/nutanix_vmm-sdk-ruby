@@ -5,8 +5,8 @@ All URIs are relative to *https://:9440/api*
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**assign_ip_by_id**](VmApi.md#assign_ip_by_id) | **POST** /vmm/v4.0/ahv/config/vms/{vmExtId}/nics/{extId}/$actions/assign-ip | Assign an IP address to the provided network device |
-| [**assign_vm_owner_0**](VmApi.md#assign_vm_owner_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/assign-owner | Assign owner of a VM |
-| [**associate_categories_0**](VmApi.md#associate_categories_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/associate-categories | Associate categories to a VM |
+| [**assign_vm_owner**](VmApi.md#assign_vm_owner) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/assign-owner | Assign owner of a VM |
+| [**associate_categories**](VmApi.md#associate_categories) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/associate-categories | Associate categories to a VM |
 | [**clone_vm**](VmApi.md#clone_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/clone | Clone a VM |
 | [**create_cd_rom**](VmApi.md#create_cd_rom) | **POST** /vmm/v4.0/ahv/config/vms/{vmExtId}/cd-roms | Create a CD-ROM device for a VM |
 | [**create_disk**](VmApi.md#create_disk) | **POST** /vmm/v4.0/ahv/config/vms/{vmExtId}/disks | Create a disk device for a VM |
@@ -24,7 +24,7 @@ All URIs are relative to *https://:9440/api*
 | [**delete_pcie_device_by_id**](VmApi.md#delete_pcie_device_by_id) | **DELETE** /vmm/v4.0/ahv/config/vms/{vmExtId}/pcie-devices/{extId} | Remove a PCIe device from a VM |
 | [**delete_serial_port_by_id**](VmApi.md#delete_serial_port_by_id) | **DELETE** /vmm/v4.0/ahv/config/vms/{vmExtId}/serial-ports/{extId} | Remove a serial port from a VM |
 | [**delete_vm_by_id**](VmApi.md#delete_vm_by_id) | **DELETE** /vmm/v4.0/ahv/config/vms/{extId} | Delete a VM |
-| [**disassociate_categories_0**](VmApi.md#disassociate_categories_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/disassociate-categories | Disassociate categories from a VM |
+| [**disassociate_categories**](VmApi.md#disassociate_categories) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/disassociate-categories | Disassociate categories from a VM |
 | [**eject_cd_rom_by_id**](VmApi.md#eject_cd_rom_by_id) | **POST** /vmm/v4.0/ahv/config/vms/{vmExtId}/cd-roms/{extId}/$actions/eject | Ejects an ISO from the provided CD-ROM device |
 | [**get_cd_rom_by_id**](VmApi.md#get_cd_rom_by_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/cd-roms/{extId} | Get configuration details for the provided CD-ROM |
 | [**get_disk_by_id**](VmApi.md#get_disk_by_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/disks/{extId} | Get configuration details for the provided disk device |
@@ -33,7 +33,7 @@ All URIs are relative to *https://:9440/api*
 | [**get_nic_by_id**](VmApi.md#get_nic_by_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/nics/{extId} | Get configuration details for the provided network device |
 | [**get_pcie_device_by_id**](VmApi.md#get_pcie_device_by_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/pcie-devices/{extId} | Get configuration details for the provided PCIe device |
 | [**get_serial_port_by_id**](VmApi.md#get_serial_port_by_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/serial-ports/{extId} | Get configuration details for the provided serial port |
-| [**get_vm_by_id_0**](VmApi.md#get_vm_by_id_0) | **GET** /vmm/v4.0/ahv/config/vms/{extId} | Get VM configuration details |
+| [**get_vm_by_id**](VmApi.md#get_vm_by_id) | **GET** /vmm/v4.0/ahv/config/vms/{extId} | Get VM configuration details |
 | [**insert_cd_rom_by_id**](VmApi.md#insert_cd_rom_by_id) | **POST** /vmm/v4.0/ahv/config/vms/{vmExtId}/cd-roms/{extId}/$actions/insert | Inserts an ISO in the provided CD-ROM device |
 | [**insert_vm_guest_tools**](VmApi.md#insert_vm_guest_tools) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/guest-tools/$actions/insert-iso | Insert NGT ISO into an available CD-ROM for a VM |
 | [**install_vm_guest_tools**](VmApi.md#install_vm_guest_tools) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/guest-tools/$actions/install | Install NGT in a VM |
@@ -43,19 +43,19 @@ All URIs are relative to *https://:9440/api*
 | [**list_nics_by_vm_id**](VmApi.md#list_nics_by_vm_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/nics | List network devices attached to a VM |
 | [**list_pcie_devices_by_vm_id**](VmApi.md#list_pcie_devices_by_vm_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/pcie-devices | List PCIe devices attached to a VM |
 | [**list_serial_ports_by_vm_id**](VmApi.md#list_serial_ports_by_vm_id) | **GET** /vmm/v4.0/ahv/config/vms/{vmExtId}/serial-ports | List serial ports attached to a VM |
-| [**list_vms_0**](VmApi.md#list_vms_0) | **GET** /vmm/v4.0/ahv/config/vms | List VMs |
+| [**list_vms**](VmApi.md#list_vms) | **GET** /vmm/v4.0/ahv/config/vms | List VMs |
 | [**migrate_nic_by_id**](VmApi.md#migrate_nic_by_id) | **POST** /vmm/v4.0/ahv/config/vms/{vmExtId}/nics/{extId}/$actions/migrate | Migrate a network device to another subnet |
 | [**migrate_vm_disks**](VmApi.md#migrate_vm_disks) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/migrate-vm-disks | VmDisk migration between storage containers |
 | [**migrate_vm_to_host**](VmApi.md#migrate_vm_to_host) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/migrate-to-host | Host to host VM migration |
 | [**power_cycle_vm**](VmApi.md#power_cycle_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/power-cycle | Force a power cycle for a VM |
-| [**power_off_vm_0**](VmApi.md#power_off_vm_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/power-off | Force power off a VM |
-| [**power_on_vm_0**](VmApi.md#power_on_vm_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/power-on | Turn on a VM |
-| [**reboot_guest_vm_0**](VmApi.md#reboot_guest_vm_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/guest-reboot | Restart the VM using NGT |
+| [**power_off_vm**](VmApi.md#power_off_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/power-off | Force power off a VM |
+| [**power_on_vm**](VmApi.md#power_on_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/power-on | Turn on a VM |
+| [**reboot_guest_vm**](VmApi.md#reboot_guest_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/guest-reboot | Restart the VM using NGT |
 | [**reboot_vm**](VmApi.md#reboot_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/reboot | Reboot a VM using ACPI |
 | [**release_ip_by_id**](VmApi.md#release_ip_by_id) | **POST** /vmm/v4.0/ahv/config/vms/{vmExtId}/nics/{extId}/$actions/release-ip | Release an assigned IP address from the provided network device |
-| [**reset_vm_0**](VmApi.md#reset_vm_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/reset | Reset a VM immediately |
-| [**revert_vm_0**](VmApi.md#revert_vm_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/revert | Revert the AHV VM. |
-| [**shutdown_guest_vm_0**](VmApi.md#shutdown_guest_vm_0) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/guest-shutdown | Shutdown the VM using NGT |
+| [**reset_vm**](VmApi.md#reset_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/reset | Reset a VM immediately |
+| [**revert_vm**](VmApi.md#revert_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/revert | Revert the AHV VM. |
+| [**shutdown_guest_vm**](VmApi.md#shutdown_guest_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/guest-shutdown | Shutdown the VM using NGT |
 | [**shutdown_vm**](VmApi.md#shutdown_vm) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/$actions/shutdown | Shutdown the VM using ACPI |
 | [**uninstall_vm_guest_tools**](VmApi.md#uninstall_vm_guest_tools) | **POST** /vmm/v4.0/ahv/config/vms/{extId}/guest-tools/$actions/uninstall | Uninstall NGT from a VM |
 | [**update_disk_by_id**](VmApi.md#update_disk_by_id) | **PUT** /vmm/v4.0/ahv/config/vms/{vmExtId}/disks/{extId} | Update the configuration for the provided disk device |
@@ -149,9 +149,9 @@ end
 - **Accept**: application/json
 
 
-## assign_vm_owner_0
+## assign_vm_owner
 
-> <AssignVmOwner202Response1> assign_vm_owner_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
+> <AssignVmOwner202Response1> assign_vm_owner(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
 
 Assign owner of a VM
 
@@ -182,28 +182,28 @@ vmm_v40_ahv_config_ownership_info = NutanixVmm::VmmV40AhvConfigOwnershipInfo.new
 
 begin
   # Assign owner of a VM
-  result = api_instance.assign_vm_owner_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
+  result = api_instance.assign_vm_owner(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->assign_vm_owner_0: #{e}"
+  puts "Error when calling VmApi->assign_vm_owner: #{e}"
 end
 ```
 
-#### Using the assign_vm_owner_0_with_http_info variant
+#### Using the assign_vm_owner_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<AssignVmOwner202Response1>, Integer, Hash)> assign_vm_owner_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
+> <Array(<AssignVmOwner202Response1>, Integer, Hash)> assign_vm_owner_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
 
 ```ruby
 begin
   # Assign owner of a VM
-  data, status_code, headers = api_instance.assign_vm_owner_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
+  data, status_code, headers = api_instance.assign_vm_owner_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_ownership_info)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AssignVmOwner202Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->assign_vm_owner_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->assign_vm_owner_with_http_info: #{e}"
 end
 ```
 
@@ -230,9 +230,9 @@ end
 - **Accept**: application/json
 
 
-## associate_categories_0
+## associate_categories
 
-> <AssociateCategories202Response1> associate_categories_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
+> <AssociateCategories202Response1> associate_categories(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
 
 Associate categories to a VM
 
@@ -263,28 +263,28 @@ vmm_v40_ahv_config_associate_vm_categories_params = NutanixVmm::VmmV40AhvConfigA
 
 begin
   # Associate categories to a VM
-  result = api_instance.associate_categories_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
+  result = api_instance.associate_categories(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->associate_categories_0: #{e}"
+  puts "Error when calling VmApi->associate_categories: #{e}"
 end
 ```
 
-#### Using the associate_categories_0_with_http_info variant
+#### Using the associate_categories_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<AssociateCategories202Response1>, Integer, Hash)> associate_categories_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
+> <Array(<AssociateCategories202Response1>, Integer, Hash)> associate_categories_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
 
 ```ruby
 begin
   # Associate categories to a VM
-  data, status_code, headers = api_instance.associate_categories_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
+  data, status_code, headers = api_instance.associate_categories_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_associate_vm_categories_params)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AssociateCategories202Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->associate_categories_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->associate_categories_with_http_info: #{e}"
 end
 ```
 
@@ -1688,9 +1688,9 @@ end
 - **Accept**: application/json
 
 
-## disassociate_categories_0
+## disassociate_categories
 
-> <DisassociateCategories202Response1> disassociate_categories_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
+> <DisassociateCategories202Response1> disassociate_categories(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
 
 Disassociate categories from a VM
 
@@ -1721,28 +1721,28 @@ vmm_v40_ahv_config_disassociate_vm_categories_params = NutanixVmm::VmmV40AhvConf
 
 begin
   # Disassociate categories from a VM
-  result = api_instance.disassociate_categories_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
+  result = api_instance.disassociate_categories(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->disassociate_categories_0: #{e}"
+  puts "Error when calling VmApi->disassociate_categories: #{e}"
 end
 ```
 
-#### Using the disassociate_categories_0_with_http_info variant
+#### Using the disassociate_categories_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<DisassociateCategories202Response1>, Integer, Hash)> disassociate_categories_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
+> <Array(<DisassociateCategories202Response1>, Integer, Hash)> disassociate_categories_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
 
 ```ruby
 begin
   # Disassociate categories from a VM
-  data, status_code, headers = api_instance.disassociate_categories_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
+  data, status_code, headers = api_instance.disassociate_categories_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_disassociate_vm_categories_params)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DisassociateCategories202Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->disassociate_categories_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->disassociate_categories_with_http_info: #{e}"
 end
 ```
 
@@ -2387,9 +2387,9 @@ end
 - **Accept**: application/json
 
 
-## get_vm_by_id_0
+## get_vm_by_id
 
-> <GetVmById200Response1> get_vm_by_id_0(ext_id)
+> <GetVmById200Response1> get_vm_by_id(ext_id)
 
 Get VM configuration details
 
@@ -2417,28 +2417,28 @@ ext_id = '12543b00-db8a-4aae-ae9e-f05f16a7d948' # String | A globally unique ide
 
 begin
   # Get VM configuration details
-  result = api_instance.get_vm_by_id_0(ext_id)
+  result = api_instance.get_vm_by_id(ext_id)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->get_vm_by_id_0: #{e}"
+  puts "Error when calling VmApi->get_vm_by_id: #{e}"
 end
 ```
 
-#### Using the get_vm_by_id_0_with_http_info variant
+#### Using the get_vm_by_id_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetVmById200Response1>, Integer, Hash)> get_vm_by_id_0_with_http_info(ext_id)
+> <Array(<GetVmById200Response1>, Integer, Hash)> get_vm_by_id_with_http_info(ext_id)
 
 ```ruby
 begin
   # Get VM configuration details
-  data, status_code, headers = api_instance.get_vm_by_id_0_with_http_info(ext_id)
+  data, status_code, headers = api_instance.get_vm_by_id_with_http_info(ext_id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetVmById200Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->get_vm_by_id_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->get_vm_by_id_with_http_info: #{e}"
 end
 ```
 
@@ -3197,9 +3197,9 @@ end
 - **Accept**: application/json
 
 
-## list_vms_0
+## list_vms
 
-> <ListVms200Response1> list_vms_0(opts)
+> <ListVms200Response1> list_vms(opts)
 
 List VMs
 
@@ -3233,28 +3233,28 @@ opts = {
 
 begin
   # List VMs
-  result = api_instance.list_vms_0(opts)
+  result = api_instance.list_vms(opts)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->list_vms_0: #{e}"
+  puts "Error when calling VmApi->list_vms: #{e}"
 end
 ```
 
-#### Using the list_vms_0_with_http_info variant
+#### Using the list_vms_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListVms200Response1>, Integer, Hash)> list_vms_0_with_http_info(opts)
+> <Array(<ListVms200Response1>, Integer, Hash)> list_vms_with_http_info(opts)
 
 ```ruby
 begin
   # List VMs
-  data, status_code, headers = api_instance.list_vms_0_with_http_info(opts)
+  data, status_code, headers = api_instance.list_vms_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListVms200Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->list_vms_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->list_vms_with_http_info: #{e}"
 end
 ```
 
@@ -3606,9 +3606,9 @@ end
 - **Accept**: application/json
 
 
-## power_off_vm_0
+## power_off_vm
 
-> <PowerOffVm202Response1> power_off_vm_0(ext_id, if_match, ntnx_request_id)
+> <PowerOffVm202Response1> power_off_vm(ext_id, if_match, ntnx_request_id)
 
 Force power off a VM
 
@@ -3638,28 +3638,28 @@ ntnx_request_id = 'cd3a02ff-1ede-4038-b944-7cbe7e42d51b' # String | A unique ide
 
 begin
   # Force power off a VM
-  result = api_instance.power_off_vm_0(ext_id, if_match, ntnx_request_id)
+  result = api_instance.power_off_vm(ext_id, if_match, ntnx_request_id)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->power_off_vm_0: #{e}"
+  puts "Error when calling VmApi->power_off_vm: #{e}"
 end
 ```
 
-#### Using the power_off_vm_0_with_http_info variant
+#### Using the power_off_vm_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PowerOffVm202Response1>, Integer, Hash)> power_off_vm_0_with_http_info(ext_id, if_match, ntnx_request_id)
+> <Array(<PowerOffVm202Response1>, Integer, Hash)> power_off_vm_with_http_info(ext_id, if_match, ntnx_request_id)
 
 ```ruby
 begin
   # Force power off a VM
-  data, status_code, headers = api_instance.power_off_vm_0_with_http_info(ext_id, if_match, ntnx_request_id)
+  data, status_code, headers = api_instance.power_off_vm_with_http_info(ext_id, if_match, ntnx_request_id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PowerOffVm202Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->power_off_vm_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->power_off_vm_with_http_info: #{e}"
 end
 ```
 
@@ -3685,9 +3685,9 @@ end
 - **Accept**: application/json
 
 
-## power_on_vm_0
+## power_on_vm
 
-> <PowerOnVm202Response1> power_on_vm_0(ext_id, if_match, ntnx_request_id)
+> <PowerOnVm202Response1> power_on_vm(ext_id, if_match, ntnx_request_id)
 
 Turn on a VM
 
@@ -3717,28 +3717,28 @@ ntnx_request_id = '1c953aaa-782b-4cef-b730-d71684736d68' # String | A unique ide
 
 begin
   # Turn on a VM
-  result = api_instance.power_on_vm_0(ext_id, if_match, ntnx_request_id)
+  result = api_instance.power_on_vm(ext_id, if_match, ntnx_request_id)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->power_on_vm_0: #{e}"
+  puts "Error when calling VmApi->power_on_vm: #{e}"
 end
 ```
 
-#### Using the power_on_vm_0_with_http_info variant
+#### Using the power_on_vm_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PowerOnVm202Response1>, Integer, Hash)> power_on_vm_0_with_http_info(ext_id, if_match, ntnx_request_id)
+> <Array(<PowerOnVm202Response1>, Integer, Hash)> power_on_vm_with_http_info(ext_id, if_match, ntnx_request_id)
 
 ```ruby
 begin
   # Turn on a VM
-  data, status_code, headers = api_instance.power_on_vm_0_with_http_info(ext_id, if_match, ntnx_request_id)
+  data, status_code, headers = api_instance.power_on_vm_with_http_info(ext_id, if_match, ntnx_request_id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PowerOnVm202Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->power_on_vm_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->power_on_vm_with_http_info: #{e}"
 end
 ```
 
@@ -3764,9 +3764,9 @@ end
 - **Accept**: application/json
 
 
-## reboot_guest_vm_0
+## reboot_guest_vm
 
-> <RebootVm202Response> reboot_guest_vm_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+> <RebootVm202Response> reboot_guest_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
 
 Restart the VM using NGT
 
@@ -3797,28 +3797,28 @@ vmm_v40_ahv_config_guest_power_options = NutanixVmm::VmmV40AhvConfigGuestPowerOp
 
 begin
   # Restart the VM using NGT
-  result = api_instance.reboot_guest_vm_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+  result = api_instance.reboot_guest_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->reboot_guest_vm_0: #{e}"
+  puts "Error when calling VmApi->reboot_guest_vm: #{e}"
 end
 ```
 
-#### Using the reboot_guest_vm_0_with_http_info variant
+#### Using the reboot_guest_vm_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<RebootVm202Response>, Integer, Hash)> reboot_guest_vm_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+> <Array(<RebootVm202Response>, Integer, Hash)> reboot_guest_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
 
 ```ruby
 begin
   # Restart the VM using NGT
-  data, status_code, headers = api_instance.reboot_guest_vm_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+  data, status_code, headers = api_instance.reboot_guest_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RebootVm202Response>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->reboot_guest_vm_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->reboot_guest_vm_with_http_info: #{e}"
 end
 ```
 
@@ -4005,9 +4005,9 @@ end
 - **Accept**: application/json
 
 
-## reset_vm_0
+## reset_vm
 
-> <ResetVm202Response1> reset_vm_0(ext_id, if_match, ntnx_request_id)
+> <ResetVm202Response1> reset_vm(ext_id, if_match, ntnx_request_id)
 
 Reset a VM immediately
 
@@ -4037,28 +4037,28 @@ ntnx_request_id = '26d9783b-0314-4fef-b704-7389e0970f4a' # String | A unique ide
 
 begin
   # Reset a VM immediately
-  result = api_instance.reset_vm_0(ext_id, if_match, ntnx_request_id)
+  result = api_instance.reset_vm(ext_id, if_match, ntnx_request_id)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->reset_vm_0: #{e}"
+  puts "Error when calling VmApi->reset_vm: #{e}"
 end
 ```
 
-#### Using the reset_vm_0_with_http_info variant
+#### Using the reset_vm_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ResetVm202Response1>, Integer, Hash)> reset_vm_0_with_http_info(ext_id, if_match, ntnx_request_id)
+> <Array(<ResetVm202Response1>, Integer, Hash)> reset_vm_with_http_info(ext_id, if_match, ntnx_request_id)
 
 ```ruby
 begin
   # Reset a VM immediately
-  data, status_code, headers = api_instance.reset_vm_0_with_http_info(ext_id, if_match, ntnx_request_id)
+  data, status_code, headers = api_instance.reset_vm_with_http_info(ext_id, if_match, ntnx_request_id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResetVm202Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->reset_vm_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->reset_vm_with_http_info: #{e}"
 end
 ```
 
@@ -4084,9 +4084,9 @@ end
 - **Accept**: application/json
 
 
-## revert_vm_0
+## revert_vm
 
-> <RevertVm202Response1> revert_vm_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
+> <RevertVm202Response1> revert_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
 
 Revert the AHV VM.
 
@@ -4117,28 +4117,28 @@ vmm_v40_ahv_config_revert_params = NutanixVmm::VmmV40AhvConfigRevertParams.new({
 
 begin
   # Revert the AHV VM.
-  result = api_instance.revert_vm_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
+  result = api_instance.revert_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->revert_vm_0: #{e}"
+  puts "Error when calling VmApi->revert_vm: #{e}"
 end
 ```
 
-#### Using the revert_vm_0_with_http_info variant
+#### Using the revert_vm_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<RevertVm202Response1>, Integer, Hash)> revert_vm_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
+> <Array(<RevertVm202Response1>, Integer, Hash)> revert_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
 
 ```ruby
 begin
   # Revert the AHV VM.
-  data, status_code, headers = api_instance.revert_vm_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
+  data, status_code, headers = api_instance.revert_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RevertVm202Response1>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->revert_vm_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->revert_vm_with_http_info: #{e}"
 end
 ```
 
@@ -4165,9 +4165,9 @@ end
 - **Accept**: application/json
 
 
-## shutdown_guest_vm_0
+## shutdown_guest_vm
 
-> <ShutdownVm202Response> shutdown_guest_vm_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+> <ShutdownVm202Response> shutdown_guest_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
 
 Shutdown the VM using NGT
 
@@ -4198,28 +4198,28 @@ vmm_v40_ahv_config_guest_power_options = NutanixVmm::VmmV40AhvConfigGuestPowerOp
 
 begin
   # Shutdown the VM using NGT
-  result = api_instance.shutdown_guest_vm_0(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+  result = api_instance.shutdown_guest_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
   p result
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->shutdown_guest_vm_0: #{e}"
+  puts "Error when calling VmApi->shutdown_guest_vm: #{e}"
 end
 ```
 
-#### Using the shutdown_guest_vm_0_with_http_info variant
+#### Using the shutdown_guest_vm_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ShutdownVm202Response>, Integer, Hash)> shutdown_guest_vm_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+> <Array(<ShutdownVm202Response>, Integer, Hash)> shutdown_guest_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
 
 ```ruby
 begin
   # Shutdown the VM using NGT
-  data, status_code, headers = api_instance.shutdown_guest_vm_0_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
+  data, status_code, headers = api_instance.shutdown_guest_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_guest_power_options)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ShutdownVm202Response>
 rescue NutanixVmm::ApiError => e
-  puts "Error when calling VmApi->shutdown_guest_vm_0_with_http_info: #{e}"
+  puts "Error when calling VmApi->shutdown_guest_vm_with_http_info: #{e}"
 end
 ```
 

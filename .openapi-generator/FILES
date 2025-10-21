@@ -1,10 +1,5 @@
-.gitignore
-.gitlab-ci.yml
-.openapi-generator-ignore
 .rspec
 .rubocop.yml
-.travis.yml
-Gemfile
 README.md
 Rakefile
 docs/AssignIpById202Response.md
@@ -434,7 +429,6 @@ docs/VmmV40AhvConfigNvramDevice.md
 docs/VmmV40AhvConfigOwnerReference.md
 docs/VmmV40AhvConfigOwnershipInfo.md
 docs/VmmV40AhvConfigPcieDevice.md
-docs/VmmV40AhvConfigPcieDeviceAllOfBackingInfo.md
 docs/VmmV40AhvConfigPcieDeviceInfo.md
 docs/VmmV40AhvConfigPcieDeviceReference.md
 docs/VmmV40AhvConfigPolicyReference.md
@@ -1127,7 +1121,6 @@ lib/nutanix_vmm/models/vmm_v40_ahv_config_nvram_device.rb
 lib/nutanix_vmm/models/vmm_v40_ahv_config_owner_reference.rb
 lib/nutanix_vmm/models/vmm_v40_ahv_config_ownership_info.rb
 lib/nutanix_vmm/models/vmm_v40_ahv_config_pcie_device.rb
-lib/nutanix_vmm/models/vmm_v40_ahv_config_pcie_device_all_of_backing_info.rb
 lib/nutanix_vmm/models/vmm_v40_ahv_config_pcie_device_info.rb
 lib/nutanix_vmm/models/vmm_v40_ahv_config_pcie_device_reference.rb
 lib/nutanix_vmm/models/vmm_v40_ahv_config_policy_reference.rb
@@ -1816,7 +1809,6 @@ spec/models/vmm_v40_ahv_config_nic_type_spec.rb
 spec/models/vmm_v40_ahv_config_nvram_device_spec.rb
 spec/models/vmm_v40_ahv_config_owner_reference_spec.rb
 spec/models/vmm_v40_ahv_config_ownership_info_spec.rb
-spec/models/vmm_v40_ahv_config_pcie_device_all_of_backing_info_spec.rb
 spec/models/vmm_v40_ahv_config_pcie_device_info_spec.rb
 spec/models/vmm_v40_ahv_config_pcie_device_reference_spec.rb
 spec/models/vmm_v40_ahv_config_pcie_device_spec.rb
