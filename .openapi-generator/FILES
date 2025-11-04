@@ -703,6 +703,7 @@ lib/nutanix_vmm/api/vm_api.rb
 lib/nutanix_vmm/api/vm_host_affinity_policies_api.rb
 lib/nutanix_vmm/api_client.rb
 lib/nutanix_vmm/api_error.rb
+lib/nutanix_vmm/api_model_base.rb
 lib/nutanix_vmm/configuration.rb
 lib/nutanix_vmm/models/assign_ip_by_id202_response.rb
 lib/nutanix_vmm/models/assign_ip_by_id4_xx_response.rb
