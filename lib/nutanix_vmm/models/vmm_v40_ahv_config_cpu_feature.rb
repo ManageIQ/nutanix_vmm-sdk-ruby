@@ -16,11 +16,11 @@ require 'time'
 module NutanixVmm
   class VmmV40AhvConfigCpuFeature
     HARDWARE_VIRTUALIZATION = "HARDWARE_VIRTUALIZATION".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [HARDWARE_VIRTUALIZATION, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [HARDWARE_VIRTUALIZATION, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

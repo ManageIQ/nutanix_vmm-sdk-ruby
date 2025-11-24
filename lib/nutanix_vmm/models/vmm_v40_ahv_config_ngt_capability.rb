@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40AhvConfigNgtCapability
     SELF_SERVICE_RESTORE = "SELF_SERVICE_RESTORE".freeze
     VSS_SNAPSHOT = "VSS_SNAPSHOT".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [SELF_SERVICE_RESTORE, VSS_SNAPSHOT, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [SELF_SERVICE_RESTORE, VSS_SNAPSHOT, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

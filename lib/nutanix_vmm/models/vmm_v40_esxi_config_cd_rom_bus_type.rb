@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40EsxiConfigCdRomBusType
     IDE = "IDE".freeze
     SATA = "SATA".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [IDE, SATA, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [IDE, SATA, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

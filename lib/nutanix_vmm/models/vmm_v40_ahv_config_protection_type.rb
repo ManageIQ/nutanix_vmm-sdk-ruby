@@ -18,11 +18,11 @@ module NutanixVmm
     UNPROTECTED = "UNPROTECTED".freeze
     PD_PROTECTED = "PD_PROTECTED".freeze
     RULE_PROTECTED = "RULE_PROTECTED".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [UNPROTECTED, PD_PROTECTED, RULE_PROTECTED, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [UNPROTECTED, PD_PROTECTED, RULE_PROTECTED, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

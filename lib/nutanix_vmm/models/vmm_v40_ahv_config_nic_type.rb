@@ -19,11 +19,11 @@ module NutanixVmm
     DIRECT_NIC = "DIRECT_NIC".freeze
     NETWORK_FUNCTION_NIC = "NETWORK_FUNCTION_NIC".freeze
     SPAN_DESTINATION_NIC = "SPAN_DESTINATION_NIC".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [NORMAL_NIC, DIRECT_NIC, NETWORK_FUNCTION_NIC, SPAN_DESTINATION_NIC, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [NORMAL_NIC, DIRECT_NIC, NETWORK_FUNCTION_NIC, SPAN_DESTINATION_NIC, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string
