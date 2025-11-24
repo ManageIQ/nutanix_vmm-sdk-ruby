@@ -18,11 +18,11 @@ module NutanixVmm
     VALID = "VALID".freeze
     REVOKED = "REVOKED".freeze
     EXPIRED = "EXPIRED".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [VALID, REVOKED, EXPIRED, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [VALID, REVOKED, EXPIRED, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

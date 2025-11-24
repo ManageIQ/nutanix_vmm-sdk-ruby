@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40AhvConfigMigrateNicType
     ASSIGN_IP = "ASSIGN_IP".freeze
     RELEASE_IP = "RELEASE_IP".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [ASSIGN_IP, RELEASE_IP, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [ASSIGN_IP, RELEASE_IP, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

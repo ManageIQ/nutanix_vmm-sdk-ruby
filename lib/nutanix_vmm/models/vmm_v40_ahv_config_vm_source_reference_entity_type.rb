@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40AhvConfigVmSourceReferenceEntityType
     VM = "VM".freeze
     VM_RECOVERY_POINT = "VM_RECOVERY_POINT".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [VM, VM_RECOVERY_POINT, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [VM, VM_RECOVERY_POINT, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

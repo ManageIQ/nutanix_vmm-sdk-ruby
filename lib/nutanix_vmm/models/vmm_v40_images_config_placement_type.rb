@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40ImagesConfigPlacementType
     SOFT = "SOFT".freeze
     HARD = "HARD".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [SOFT, HARD, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [SOFT, HARD, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

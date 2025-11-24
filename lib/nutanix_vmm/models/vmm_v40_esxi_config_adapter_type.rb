@@ -22,11 +22,11 @@ module NutanixVmm
     VMXNET3 = "VMXNET3".freeze
     E1000_E = "E1000E".freeze
     SRIOV = "SRIOV".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [E1000, PCNET32, VMXNET, VMXNET2, VMXNET3, E1000_E, SRIOV, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [E1000, PCNET32, VMXNET, VMXNET2, VMXNET3, E1000_E, SRIOV, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

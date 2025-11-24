@@ -17,11 +17,11 @@ module NutanixVmm
   class VmmV40ContentComplianceStatus
     COMPLIANT = "COMPLIANT".freeze
     NON_COMPLIANT = "NON_COMPLIANT".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [COMPLIANT, NON_COMPLIANT, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [COMPLIANT, NON_COMPLIANT, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

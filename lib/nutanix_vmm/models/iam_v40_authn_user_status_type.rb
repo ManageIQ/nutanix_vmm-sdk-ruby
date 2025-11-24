@@ -17,11 +17,11 @@ module NutanixVmm
   class IamV40AuthnUserStatusType
     ACTIVE = "ACTIVE".freeze
     INACTIVE = "INACTIVE".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [ACTIVE, INACTIVE, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [ACTIVE, INACTIVE, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string

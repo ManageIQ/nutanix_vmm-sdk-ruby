@@ -18,11 +18,11 @@ module NutanixVmm
     OTHER = "OTHER".freeze
     GUEST_TOOLS = "GUEST_TOOLS".freeze
     GUEST_CUSTOMIZATION = "GUEST_CUSTOMIZATION".freeze
-    _UNKNOWN = "$UNKNOWN".freeze
-    _REDACTED = "$REDACTED".freeze
+    UNKNOWN = "$UNKNOWN".freeze
+    REDACTED = "$REDACTED".freeze
 
     def self.all_vars
-      @all_vars ||= [OTHER, GUEST_TOOLS, GUEST_CUSTOMIZATION, _UNKNOWN, _REDACTED].freeze
+      @all_vars ||= [OTHER, GUEST_TOOLS, GUEST_CUSTOMIZATION, UNKNOWN, REDACTED].freeze
     end
 
     # Builds the enum from string
