@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sed -i 's/_UNKNOWN/UNKNOWN/g'   $1
+sed -i 's/_REDACTED/REDACTED/g' $1
