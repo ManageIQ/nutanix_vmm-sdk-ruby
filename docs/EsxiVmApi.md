@@ -976,7 +976,7 @@ end
 
 ## revert_vm
 
-> <RevertVm202Response> revert_vm(ext_id, if_match, ntnx_request_id, vmm_v40_esxi_config_revert_params)
+> <RevertVm202Response> revert_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
 
 Revert the ESXi VM.
 
@@ -1003,11 +1003,11 @@ api_instance = NutanixVmm::EsxiVmApi.new
 ext_id = '7c9a90f9-5903-44be-bd10-1b431102e05c' # String | A globally unique identifier of a VM of type UUID.
 if_match = 'if_match_example' # String | The If-Match request header makes the request conditional. When not provided the server will respond with an HTTP 428 (Precondition Required) response code indicating that the server requires the request to be conditional. The server will allow successful completion of PUT and PATCH operations, if the resource matches the ETag value returned to the response of a GET operation. If the conditional does not match, then an HTTP 412 (Precondition Failed) response 
 ntnx_request_id = '54725724-25a8-4c6f-b0fc-fa2e725a8704' # String | A unique identifier that is associated with each request. The provided value must be opaque and preferably in Universal Unique Identifier (UUID) format. This identifier is also used as an idempotence token for safely retrying requests in case of network errors. All the supported Nutanix API clients add this auto-generated request identifier to each request. 
-vmm_v40_esxi_config_revert_params = NutanixVmm::VmmV40EsxiConfigRevertParams.new({vm_recovery_point_ext_id: 'd1fe71c9-dee5-4989-9c1c-c0e4d5635a5c'}) # VmmV40EsxiConfigRevertParams | Input for the VM revert operation. Specify the VM Recovery Point ID to which the VM would be reverted.
+vmm_v40_ahv_config_revert_params = NutanixVmm::VmmV40AhvConfigRevertParams.new({vm_recovery_point_ext_id: 'df867128-8407-4f37-8ede-483a8f929a0c'}) # VmmV40AhvConfigRevertParams | Input for the VM revert operation. Specify the VM Recovery Point ID to which the VM would be reverted.
 
 begin
   # Revert the ESXi VM.
-  result = api_instance.revert_vm(ext_id, if_match, ntnx_request_id, vmm_v40_esxi_config_revert_params)
+  result = api_instance.revert_vm(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
   p result
 rescue NutanixVmm::ApiError => e
   puts "Error when calling EsxiVmApi->revert_vm: #{e}"
@@ -1018,12 +1018,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<RevertVm202Response>, Integer, Hash)> revert_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_esxi_config_revert_params)
+> <Array(<RevertVm202Response>, Integer, Hash)> revert_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
 
 ```ruby
 begin
   # Revert the ESXi VM.
-  data, status_code, headers = api_instance.revert_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_esxi_config_revert_params)
+  data, status_code, headers = api_instance.revert_vm_with_http_info(ext_id, if_match, ntnx_request_id, vmm_v40_ahv_config_revert_params)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RevertVm202Response>
@@ -1039,7 +1039,7 @@ end
 | **ext_id** | **String** | A globally unique identifier of a VM of type UUID. |  |
 | **if_match** | **String** | The If-Match request header makes the request conditional. When not provided the server will respond with an HTTP 428 (Precondition Required) response code indicating that the server requires the request to be conditional. The server will allow successful completion of PUT and PATCH operations, if the resource matches the ETag value returned to the response of a GET operation. If the conditional does not match, then an HTTP 412 (Precondition Failed) response  |  |
 | **ntnx_request_id** | **String** | A unique identifier that is associated with each request. The provided value must be opaque and preferably in Universal Unique Identifier (UUID) format. This identifier is also used as an idempotence token for safely retrying requests in case of network errors. All the supported Nutanix API clients add this auto-generated request identifier to each request.  |  |
-| **vmm_v40_esxi_config_revert_params** | [**VmmV40EsxiConfigRevertParams**](VmmV40EsxiConfigRevertParams.md) | Input for the VM revert operation. Specify the VM Recovery Point ID to which the VM would be reverted. |  |
+| **vmm_v40_ahv_config_revert_params** | [**VmmV40AhvConfigRevertParams**](VmmV40AhvConfigRevertParams.md) | Input for the VM revert operation. Specify the VM Recovery Point ID to which the VM would be reverted. |  |
 
 ### Return type
 
