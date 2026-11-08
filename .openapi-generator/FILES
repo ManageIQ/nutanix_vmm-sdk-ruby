@@ -638,7 +638,6 @@ docs/VmmV40EsxiConfigPowerOnVmApiResponse.md
 docs/VmmV40EsxiConfigPowerState.md
 docs/VmmV40EsxiConfigRebootGuestOSApiResponse.md
 docs/VmmV40EsxiConfigResetVmApiResponse.md
-docs/VmmV40EsxiConfigRevertParams.md
 docs/VmmV40EsxiConfigRevertVmApiResponse.md
 docs/VmmV40EsxiConfigShutdownVmApiResponse.md
 docs/VmmV40EsxiConfigSuspendVmApiResponse.md
@@ -1331,7 +1330,6 @@ lib/nutanix_vmm/models/vmm_v40_esxi_config_power_on_vm_api_response.rb
 lib/nutanix_vmm/models/vmm_v40_esxi_config_power_state.rb
 lib/nutanix_vmm/models/vmm_v40_esxi_config_reboot_guest_os_api_response.rb
 lib/nutanix_vmm/models/vmm_v40_esxi_config_reset_vm_api_response.rb
-lib/nutanix_vmm/models/vmm_v40_esxi_config_revert_params.rb
 lib/nutanix_vmm/models/vmm_v40_esxi_config_revert_vm_api_response.rb
 lib/nutanix_vmm/models/vmm_v40_esxi_config_shutdown_vm_api_response.rb
 lib/nutanix_vmm/models/vmm_v40_esxi_config_suspend_vm_api_response.rb
@@ -2020,7 +2018,6 @@ spec/models/vmm_v40_esxi_config_power_on_vm_api_response_spec.rb
 spec/models/vmm_v40_esxi_config_power_state_spec.rb
 spec/models/vmm_v40_esxi_config_reboot_guest_os_api_response_spec.rb
 spec/models/vmm_v40_esxi_config_reset_vm_api_response_spec.rb
-spec/models/vmm_v40_esxi_config_revert_params_spec.rb
 spec/models/vmm_v40_esxi_config_revert_vm_api_response_spec.rb
 spec/models/vmm_v40_esxi_config_shutdown_vm_api_response_spec.rb
 spec/models/vmm_v40_esxi_config_suspend_vm_api_response_spec.rb
